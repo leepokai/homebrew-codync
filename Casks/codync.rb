@@ -1,13 +1,14 @@
 cask "codync" do
-  version "1.0.5"
-  sha256 "0429dbf03796e3974ac950f65a5abb3efbf68c2b21eefa771bae6f1e7c728497"
+  version "2.2.0"
+  sha256 "9f1ac1abf7200ee21f66d264742d1176068df0aca78ce4adf65a7fb1bb623e78"
 
-  url "https://github.com/leepokai/Codync/releases/download/v#{version}/Codync-macOS.dmg"
+  url "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-macos.dmg"
   name "Codync"
-  desc "Real-time Claude Code session monitor for macOS menu bar"
+  desc "Message your coding agents (Claude Code, Codex, OpenCode) from your iPhone"
   homepage "https://codync.dev"
 
   app "Codync.app"
+  binary "#{appdir}/Codync.app/Contents/MacOS/codync-host"
 
   zap trash: [
     "~/Library/Preferences/com.pokai.Codync.plist",
