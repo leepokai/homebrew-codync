@@ -2,9 +2,9 @@
 # The `homebrew` job in .github/workflows/host.yml fills in the version and the four
 # sha256 values (in this order: mac arm, mac intel, linux arm, linux intel) on every `v*` tag.
 class CodyncHost < Formula
-  desc "Runs your coding-agent bots (Claude Code, Codex, OpenCode…) for the Codync app"
-  homepage "https://github.com/leepokai/Codync"
-  version "2.2.0"
+  desc "Host that runs coding agents (Claude Code, Codex, Cursor…) as Codync bots"
+  homepage "https://www.codync.dev"
+  version "2.2.1"
   license "MIT"
 
   base = "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-host"
@@ -12,22 +12,22 @@ class CodyncHost < Formula
   on_macos do
     on_arm do
       url "#{base}-macos-arm64.tar.gz"
-      sha256 "7556d313cb53768f65b3f3c46eb7bcde841ab8705e17f84d751375a17b4f9bab"
+      sha256 "cccaf2d375ff048bf9e6e6908c0a5bda7e7d754306eb4be06d7ab1739cfd6962"
     end
     on_intel do
       url "#{base}-macos-x86_64.tar.gz"
-      sha256 "910fc21ab7f044d2bc1e11dba90f3d9ef7e46c612d2a5e8b112df4f614a6e0e4"
+      sha256 "750959339b44dda38079bc6117a85b2c8963790a36b68e6b9314df0f5919a1b1"
     end
   end
 
   on_linux do
     on_arm do
       url "#{base}-linux-arm64.tar.gz"
-      sha256 "1fbf70c7536518f520add8bd3262a72d85186628ca1f9c139563630ddbffd759"
+      sha256 "f750d45085fbce56c388eeb17a90f64366562fa7bafef47acd357df1fd5b1303"
     end
     on_intel do
       url "#{base}-linux-x86_64.tar.gz"
-      sha256 "0303b28a5d950157f75e1e725c007c0278c69e1c66817b7c46dcbfaa9a567943"
+      sha256 "49e79962fc447f98fb478f891f1dd2fe73a20fa2f063f228eb85d85531a0c152"
     end
   end
 
