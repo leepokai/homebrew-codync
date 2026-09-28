@@ -1,6 +1,6 @@
 cask "codync" do
-  version "2.2.0"
-  sha256 "9f1ac1abf7200ee21f66d264742d1176068df0aca78ce4adf65a7fb1bb623e78"
+  version "2.2.1"
+  sha256 "c0223c6f85bef45b30ddc1f4bcc932a359ab43dd6e9f08f51ba6b26639f04a40"
 
   url "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-macos.dmg"
   name "Codync"
