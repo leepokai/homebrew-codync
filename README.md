@@ -7,6 +7,6 @@ brew install --cask leepokai/codync/codync      # Mac app (the host ships inside
 brew install leepokai/codync/codync-host        # host only: Linux, headless Macs
 ```
 
-Or without Homebrew: `curl -fsSL https://codync.dev/install.sh | sh`
+Or without Homebrew: `curl -fsSL https://raw.githubusercontent.com/leepokai/Codync/main/packaging/install.sh | sh`
 
 Both files are updated automatically by the release workflows in the Codync repo.
