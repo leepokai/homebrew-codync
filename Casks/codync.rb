@@ -7,7 +7,7 @@ cask "codync" do
   desc "Message your coding agents as bots from iPhone, Mac, Linux or terminal"
   homepage "https://www.codync.dev"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Codync.app"
   binary "#{appdir}/Codync.app/Contents/MacOS/codync-host"
