@@ -1,11 +1,13 @@
 cask "codync" do
   version "2.2.1"
-  sha256 "c0223c6f85bef45b30ddc1f4bcc932a359ab43dd6e9f08f51ba6b26639f04a40"
+  sha256 "f213d8e1c916bbdc6434bc61811e7e707802ffcc5e100ce2d49f2d14d2a812bd"
 
   url "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-macos.dmg"
   name "Codync"
-  desc "Message your coding agents (Claude Code, Codex, OpenCode) from your iPhone"
-  homepage "https://codync.dev"
+  desc "Message your coding agents as bots from iPhone, Mac, Linux or terminal"
+  homepage "https://www.codync.dev"
+
+  depends_on macos: ">= :sonoma"
 
   app "Codync.app"
   binary "#{appdir}/Codync.app/Contents/MacOS/codync-host"
