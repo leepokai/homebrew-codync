@@ -1,12 +1,16 @@
+# Homebrew cask template for the leepokai/homebrew-codync tap.
+# The release job in .github/workflows/release-macos.yml fills in the version and the
+# DMG's sha256 on every `v*` tag.
 cask "codync" do
-  version "2.2.1"
-  sha256 "f213d8e1c916bbdc6434bc61811e7e707802ffcc5e100ce2d49f2d14d2a812bd"
+  version "2.2.2"
+  sha256 "4914e16176e608821a25c8c1013c0afd52d847a03744cbefb21a846f4342c48d"
 
   url "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-macos.dmg"
   name "Codync"
   desc "Message your coding agents as bots from your phone, desktop or terminal"
   homepage "https://www.codync.dev/"
 
+  auto_updates true
   depends_on macos: :sonoma
 
   app "Codync.app"
