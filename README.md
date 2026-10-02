@@ -9,4 +9,4 @@ brew install leepokai/codync/codync-host        # host only: Linux, headless Mac
 
 Or without Homebrew: `curl -fsSL https://raw.githubusercontent.com/leepokai/Codync/main/packaging/install.sh | sh`
 
-Both files are updated automatically by the release workflows in the Codync repo.
+Generated from [`packaging/homebrew`](https://github.com/leepokai/Codync/tree/main/packaging/homebrew) by the release workflows in the Codync repo; edit the templates there, not this repo.
