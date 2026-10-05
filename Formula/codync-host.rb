@@ -4,7 +4,7 @@
 class CodyncHost < Formula
   desc "Host that runs coding agents (Claude Code, Codex, Cursor…) as Codync bots"
   homepage "https://www.codync.dev"
-  version "2.6.4"
+  version "2.7.0"
   license "MIT"
 
   base = "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-host"
@@ -12,27 +12,29 @@ class CodyncHost < Formula
   on_macos do
     on_arm do
       url "#{base}-macos-arm64.tar.gz"
-      sha256 "9ac705da496aad3a37effb7e687085b3516824c1f2423d37e142caf78aff5aa5"
+      sha256 "b72d32e4a1a014597f42386a15d6488d214ec498e0facba60f2bcc4920cdbfc5"
     end
     on_intel do
       url "#{base}-macos-x86_64.tar.gz"
-      sha256 "a54c37dd488f7895b7e42ce992f78f528a152a07386f9c57dd6980e0d6c6f5e3"
+      sha256 "0c137d2c81df5ed9270a7b9acdc69016f53dbcc5f7514392a96bfa23b80ef684"
     end
   end
 
   on_linux do
     on_arm do
       url "#{base}-linux-arm64.tar.gz"
-      sha256 "20cc4cc6cf88aa363ed21b83fc184b29d9c3caf6dbae09e9b9ed821c46a1998c"
+      sha256 "43a422632d4aab05a9b23363eb864af753c026ab9a6c2fafbf0ae637be4b8765"
     end
     on_intel do
       url "#{base}-linux-x86_64.tar.gz"
-      sha256 "4e2d57221e9c37d931d68be337b71f61865a1847599576da3f7d6225e0bddd31"
+      sha256 "985767110e17a27df78a0faebcabacfac17df5ae15690f759e0ace463e6338d3"
     end
   end
 
   def install
     bin.install "codync-host"
+    # Linux: the Remote screen helper (needs the system's GStreamer and xdg-desktop-portal).
+    bin.install "codync-screen" if OS.linux?
   end
 
   def caveats
