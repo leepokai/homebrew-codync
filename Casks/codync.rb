@@ -2,8 +2,8 @@
 # The macOS job in .github/workflows/release-desktop.yml fills in the version and the
 # DMG's sha256 on every `v*` tag.
 cask "codync" do
-  version "2.7.1"
-  sha256 "6f4c13b4ad61d8f3eaa2f7798c0a90c4d1b9586b5f81b58f5d87ff1eac243573"
+  version "2.7.2"
+  sha256 "a138cbf1106a25eecc1c342af0bfb694e6bf93ab4eb8952131faa24d6bbf74f1"
 
   url "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-macos.dmg"
   name "Codync"
