@@ -4,30 +4,30 @@
 class CodyncHost < Formula
   desc "Host that runs coding agents (Claude Code, Codex, Cursor…) as Codync bots"
   homepage "https://www.codync.dev"
-  version "2.11.0"
-  license "MIT"
+  version "2.11.1"
+  license "Apache-2.0"
 
   base = "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-host"
 
   on_macos do
     on_arm do
       url "#{base}-macos-arm64.tar.gz"
-      sha256 "64896bf437aff039053fa389b8aeb648f438f01d69e720ecbb46e12f193cb4eb"
+      sha256 "4bb55754c59a86fddb1a1251685ac23b37c74f90be2fb0dc2f0f32069f5edcea"
     end
     on_intel do
       url "#{base}-macos-x86_64.tar.gz"
-      sha256 "f8ce4d398395d4222ee73f4dbfefe2194aa0d831af9c60a6c6f27f1eb09f7f13"
+      sha256 "989c128b539c70ffaf89bc3001e5b7f26c3b0b3bc4d4b56e78b942eea96c0d6c"
     end
   end
 
   on_linux do
     on_arm do
       url "#{base}-linux-arm64.tar.gz"
-      sha256 "d1e67c2d613019ce768f37e1673457d06b94442579e9a190152849bdb0271caf"
+      sha256 "ca214e5e093fede90436bc6d023c19930cb85d515b27bea926af89675e740d87"
     end
     on_intel do
       url "#{base}-linux-x86_64.tar.gz"
-      sha256 "e83c75fef9c0e7b8ac2df137349a31271b5fcd2b4466c00b8f209250cb1c56df"
+      sha256 "1c3453af5d86f08169db804eff55cb36bffce5b0d1b4cb5347678b6f4e56359d"
     end
   end
 
