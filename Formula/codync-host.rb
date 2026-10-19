@@ -1,10 +1,10 @@
 # Homebrew formula template for the leepokai/homebrew-codync tap.
-# The `homebrew` job in .github/workflows/host.yml fills in the version and the four
-# sha256 values (in this order: mac arm, mac intel, linux arm, linux intel) on every `v*` tag.
+# tools/release-gate.py fills in the version and the four sha256 values (in this order: mac arm,
+# mac intel, linux arm, linux intel) of the release it marks latest.
 class CodyncHost < Formula
   desc "Host that runs coding agents (Claude Code, Codex, Cursor…) as Codync bots"
   homepage "https://www.codync.dev"
-  version "2.17.5"
+  version "2.19.3"
   license "Apache-2.0"
 
   base = "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-host"
@@ -12,22 +12,22 @@ class CodyncHost < Formula
   on_macos do
     on_arm do
       url "#{base}-macos-arm64.tar.gz"
-      sha256 "d4ff57d07d006c11b930407982bdeed09aef390bc66ab03cdd6088f173773534"
+      sha256 "494a4d3b593bf7c5997201fbed3e609b7c3ee56d7af136db53048aa7d01f8bf2"
     end
     on_intel do
       url "#{base}-macos-x86_64.tar.gz"
-      sha256 "0ba5dbeab8e3bac7c088d7cd865f343a5ed81a7ab7b097d9e5ff269319d91d78"
+      sha256 "8c58324ebde8e5b4768fc0d31a876be6cc18da83e9a315ffd8660e6ee1641e77"
     end
   end
 
   on_linux do
     on_arm do
       url "#{base}-linux-arm64.tar.gz"
-      sha256 "ba8a9ab4fdb265f53e8a8e0de64ddce4a6d09e72072d62b39c7ffee4a21061f9"
+      sha256 "f067b4dcdd8dbdb421c32ec07bf06b927f33dc38ab2f7488da02fb8f85a06006"
     end
     on_intel do
       url "#{base}-linux-x86_64.tar.gz"
-      sha256 "96aa03eef265b7cdd136ecef4d725d8c0616e9ea3a710840d02e020d28e26e5f"
+      sha256 "f204899fe7aab678fa01933ebff5b3d7f6f49de0d3a19d32f6e65c274474643f"
     end
   end
 
