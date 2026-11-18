@@ -1,8 +1,8 @@
 # Homebrew cask template for the leepokai/homebrew-codync tap.
 # tools/release-gate.py fills in the version and the DMG's sha256 of the release it marks latest.
 cask "codync" do
-  version "2.49.1"
-  sha256 "b5ef9a9ed2101dba0815d5778000ddf57aca6874852e2a1bc28feca9408730b9"
+  version "2.49.3"
+  sha256 "811be81e80d2f3ff9af16800d213450e813ff6135059b3422cc27c4f7f2ad223"
 
   url "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-macos.dmg"
   name "Codync"
