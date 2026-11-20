@@ -1,8 +1,8 @@
 # Homebrew cask template for the leepokai/homebrew-codync tap.
 # tools/release-gate.py fills in the version and the DMG's sha256 of the release it marks latest.
 cask "codync" do
-  version "2.50.0"
-  sha256 "1854696bce851d09fd558ab129a0df41534e2f54f338058f19efb5002b3f8eaa"
+  version "2.51.0"
+  sha256 "2e91c6551f78adc3d53234eda7c4f3d864c62f5740e8402dd11564f510b8a367"
 
   url "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-macos.dmg"
   name "Codync"
@@ -30,5 +30,5 @@ cask "codync" do
     "~/Library/Preferences/com.pokai.Codync.plist",
   ]
 
-  caveats "Open Codync to start the host, then choose Pair iPhone… in the menu bar."
+  caveats "Open Codync to start the host, then choose Pair phone… in the menu bar."
 end

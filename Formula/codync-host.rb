@@ -4,7 +4,7 @@
 class CodyncHost < Formula
   desc "Host that runs coding agents (Claude Code, Codex, Cursor…) as Codync bots"
   homepage "https://www.codync.dev"
-  version "2.50.0"
+  version "2.51.0"
   license "Apache-2.0"
 
   base = "https://github.com/leepokai/Codync/releases/download/v#{version}/codync-host"
@@ -12,22 +12,22 @@ class CodyncHost < Formula
   on_macos do
     on_arm do
       url "#{base}-macos-arm64.tar.gz"
-      sha256 "070cd93d56f70c8fcfffcc0c6549c1556bef4209067c3d00b5c77fbf9478c97e"
+      sha256 "22047dbd039fccee1b827abc00cc81b7ad996570aad4149efd31dcb4a2b9fc9d"
     end
     on_intel do
       url "#{base}-macos-x86_64.tar.gz"
-      sha256 "08cdf75165818c47625729bb308dd3ce05e009e00671e816dcbaf2484351e53b"
+      sha256 "74891300297e8e38ef42d3246170e6a1ce827391a87140155a528038e7958d50"
     end
   end
 
   on_linux do
     on_arm do
       url "#{base}-linux-arm64.tar.gz"
-      sha256 "4bcd2b7e49589e44b797c0f9605ee2f78210a3169904c7e6b46afb3470ccc5ca"
+      sha256 "91831da834807fe098d1dae8d394c8c112f517eeb54bd4f8d0fbcfae79653c8f"
     end
     on_intel do
       url "#{base}-linux-x86_64.tar.gz"
-      sha256 "07ab7b34eddf69b031551947dbb3a5c136276ba5de4aea1db4bde6d188e89c45"
+      sha256 "bb4ed5b702583f80afbaafc6d413fe8d0e1ac07c837809683943726d49e45f8d"
     end
   end
 
@@ -41,7 +41,7 @@ class CodyncHost < Formula
 
   def caveats
     <<~EOS
-      Start the host in the background and pair your iPhone:
+      Start the host in the background and pair your phone:
         codync-host install
         codync-host pair
     EOS
